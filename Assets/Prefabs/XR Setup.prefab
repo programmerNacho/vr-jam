@@ -154,7 +154,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 956944753066033471, guid: fd0378f25e2f65541851fd5ce8b464bb,
+  m_ModelPrefab: {fileID: 4489516131293539439, guid: fd0378f25e2f65541851fd5ce8b464bb,
     type: 3}
   m_ModelTransform: {fileID: 324521848608720742}
   m_AnimateModel: 0
@@ -478,6 +478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5116633426999534221}
   - component: {fileID: 5116633426999534220}
+  - component: {fileID: 1318135246}
   m_Layer: 0
   m_Name: XR Rig
   m_TagString: Untagged
@@ -518,6 +519,18 @@ MonoBehaviour:
   m_TrackingOriginMode: 2
   m_TrackingSpace: 3
   m_CameraYOffset: 1.36144
+--- !u!114 &1318135246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5116633426999534223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d844f7100c975488d9892951851f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5116633427232746349
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,8 +574,8 @@ Camera:
   m_GameObject: {fileID: 5116633427232746349}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -723,7 +736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5116633428349637284}
   m_Layer: 0
-  m_Name: XR_Setup
+  m_Name: XR Setup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -796,7 +809,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 956944753066033471, guid: fd0378f25e2f65541851fd5ce8b464bb,
+  m_ModelPrefab: {fileID: 4489516131293539439, guid: fd0378f25e2f65541851fd5ce8b464bb,
     type: 3}
   m_ModelTransform: {fileID: 1452402519}
   m_AnimateModel: 0

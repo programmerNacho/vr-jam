@@ -611,6 +611,33 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Teleportation",
+            "id": "856b8899-bb48-4336-8ae3-262dc4c56bb7",
+            "actions": [
+                {
+                    "name": "Teleport",
+                    "type": "Button",
+                    "id": "20d3dcd7-22fd-4348-9d38-c9b6566dea9b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3edcff83-589b-4e2b-9c0f-943e04026626",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Teleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
