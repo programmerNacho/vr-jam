@@ -2,29 +2,20 @@
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class Bow : XRGrabInteractable
+public class Bow : MonoBehaviour
 {
     private Animator animator = null;
     private Puller puller = null;
 
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
         animator = GetComponent<Animator>();
         puller = GetComponentInChildren<Puller>();
     }
 
-    public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
+    private void Update()
     {
-        base.ProcessInteractable(updatePhase);
-        
-        if(updatePhase == XRInteractionUpdateOrder.UpdatePhase.Dynamic)
-        {
-            if(isSelected)
-            {
-                AnimateBow(puller.PullAmount);
-            }
-        }
+        AnimateBow(puller.PullAmount);
     }
 
     private void AnimateBow(float value)
