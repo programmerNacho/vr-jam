@@ -13,12 +13,6 @@ public class Player : MonoBehaviour
 
     private InputAction teleportAction = null;
 
-    //[ContextMenu("DebugTeleportAction")]
-    //private void DebugTeleportAction()
-    //{
-    //    OnTeleportActionPressed.Invoke();
-    //}
-
     private void Awake()
     {
         InputActionMap teleportationActionMap = inputActionAsset.FindActionMap("Teleportation");

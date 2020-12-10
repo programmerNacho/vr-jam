@@ -27,9 +27,10 @@ public class Notch : XRSocketInteractor
     protected override void OnHoverEntered(XRBaseInteractable interactable)
     {
         base.OnHoverEntered(interactable);
-        if (interactable is Arrow arrow && arrow.selectingInteractor is XRBaseInteractor hand)
+        if (selectTarget == null && interactable is Arrow arrow && arrow.selectingInteractor is XRBaseInteractor hand)
         {
             interactionManager.SelectExit(hand, arrow);
+            interactionManager.ClearInteractorSelection(hand);
             interactionManager.ForceSelect(this, arrow);
         }
     }
