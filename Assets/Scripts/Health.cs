@@ -21,6 +21,11 @@ public class Health : MonoBehaviour
         currentHealthPoints = initialHealthPoints;
     }
 
+    private void OnDestroy()
+    {
+        OnDeath.RemoveAllListeners();
+    }
+
     public void Attacked(int damagePoints)
     {
         if(IsAlive)
@@ -32,6 +37,7 @@ public class Health : MonoBehaviour
                 currentHealthPoints = 0;
                 IsAlive = false;
                 OnDeath.Invoke();
+                OnDeath.RemoveAllListeners();
             }
         }
     }
