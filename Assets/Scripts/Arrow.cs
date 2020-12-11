@@ -14,10 +14,13 @@ public class Arrow : XRGrabInteractable
 
     private new Rigidbody rigidbody = null;
 
+    private Damager damager = null;
+
     protected override void Awake()
     {
         base.Awake();
         rigidbody = GetComponent<Rigidbody>();
+        damager = GetComponent<Damager>();
     }
 
     private void FixedUpdate()
@@ -31,16 +34,26 @@ public class Arrow : XRGrabInteractable
 
     private void CheckForCollision()
     {
-        if(Physics.Linecast(lastPosition, tip.position))
+        if(Physics.Linecast(lastPosition, tip.position, out RaycastHit hit))
         {
-            Stop();
+            Stop(hit.transform);
+            CheckAttack(hit.transform.GetComponent<Health>());
         }
     }
 
-    private void Stop()
+    private void Stop(Transform collidedTransform)
     {
         inAir = false;
         SetPhysics(false);
+        transform.SetParent(collidedTransform, true);
+    }
+
+    private void CheckAttack(Health otherHealth)
+    {
+        if (otherHealth)
+        {
+            damager.Attack(otherHealth);
+        }
     }
 
     public void Release(float pullValue)

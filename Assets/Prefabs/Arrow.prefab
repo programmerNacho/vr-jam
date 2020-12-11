@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 5832823175582339433}
   - component: {fileID: 3544760493190169588}
   - component: {fileID: 8995755686187618278}
+  - component: {fileID: 3827859161131431504}
   m_Layer: 8
   m_Name: Arrow
   m_TagString: Untagged
@@ -333,8 +334,21 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
-  speed: 20
+  speed: 35
   tip: {fileID: 8386148805111352677}
+--- !u!114 &3827859161131431504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8542102953145869890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977a1bf05ff213c46bfe4eb4b9b9df62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePoints: 1
 --- !u!1 &8589002692731022628
 GameObject:
   m_ObjectHideFlags: 0
