@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class RoundManager : MonoBehaviour
 {
@@ -66,7 +65,7 @@ public class RoundManager : MonoBehaviour
     {
         if(currentRoundIndex + 1 >= rounds.Count)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            FindObjectOfType<GameManager>().Won();
         }
         else
         {

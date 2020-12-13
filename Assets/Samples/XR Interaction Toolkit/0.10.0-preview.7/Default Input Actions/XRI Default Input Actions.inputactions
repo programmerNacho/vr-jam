@@ -613,13 +613,21 @@
             ]
         },
         {
-            "name": "Teleportation",
+            "name": "GameActions",
             "id": "856b8899-bb48-4336-8ae3-262dc4c56bb7",
             "actions": [
                 {
                     "name": "Teleport",
                     "type": "Button",
                     "id": "20d3dcd7-22fd-4348-9d38-c9b6566dea9b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "921542ba-d42e-405d-9c75-8c3fae4d9c1e",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -634,6 +642,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Teleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d7eda268-5492-4a2d-9d4d-a38336bda089",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

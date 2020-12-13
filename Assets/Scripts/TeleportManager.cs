@@ -13,13 +13,13 @@ public class TeleportManager : MonoBehaviour
     [SerializeField]
     private float angleThresholdSelect = 30;
 
-    private Player player = null;
+    private PlayerInput playerInput = null;
     private TeleportNode nodeWithPlayer = null;
     private TeleportNode selectedTeleportNode = null;
 
     private void Awake()
     {
-        player = FindObjectOfType<Player>();
+        playerInput = FindObjectOfType<PlayerInput>();
     }
 
     private void Start()
@@ -29,17 +29,17 @@ public class TeleportManager : MonoBehaviour
 
     private void OnEnable()
     {
-        player.OnTeleportActionPressed.AddListener(PlayerTeleportActionPressed);
+        playerInput.OnTeleportActionPressed.AddListener(PlayerTeleportActionPressed);
     }
 
     private void OnDisable()
     {
-        player.OnTeleportActionPressed.RemoveListener(PlayerTeleportActionPressed);
+        playerInput.OnTeleportActionPressed.RemoveListener(PlayerTeleportActionPressed);
     }
 
     private void TeleportPlayer(TeleportNode teleportNode)
     {
-        player.transform.SetPositionAndRotation(teleportNode.teleportTransform.position, teleportNode.teleportTransform.rotation);
+        playerInput.transform.SetPositionAndRotation(teleportNode.teleportTransform.position, teleportNode.teleportTransform.rotation);
         nodeWithPlayer = teleportNode;
     }
 

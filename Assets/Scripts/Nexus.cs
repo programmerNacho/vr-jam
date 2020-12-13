@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Nexus : MonoBehaviour
 {
@@ -24,6 +23,6 @@ public class Nexus : MonoBehaviour
 
     private void Dead()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        FindObjectOfType<GameManager>().Lost();
     }
 }
